@@ -1,0 +1,751 @@
+$date
+  Tue Mar 19 08:04:04 2024
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module numeric_std $end
+$upscope $end
+$scope module test_etage_ex $end
+$var reg 32 ! op1_ex[31:0] $end
+$var reg 32 " op2_ex[31:0] $end
+$var reg 32 # extlmm_ex[31:0] $end
+$var reg 32 $ res_fwd_me[31:0] $end
+$var reg 32 % res_fwd_er[31:0] $end
+$var reg 4 & op3_ex[3:0] $end
+$var reg 2 ' ea_ex[1:0] $end
+$var reg 2 ( eb_ex[1:0] $end
+$var reg 2 ) aluctrl_ex[1:0] $end
+$var reg 1 * alusrc_ex $end
+$var reg 4 + cc[3:0] $end
+$var reg 4 , op3_ex_out[3:0] $end
+$var reg 32 - res_ex[31:0] $end
+$var reg 32 . wd_ex[31:0] $end
+$var reg 32 / npc_fw_br[31:0] $end
+$scope module fetch $end
+$var reg 32 0 op1_ex[31:0] $end
+$var reg 32 1 op2_ex[31:0] $end
+$var reg 32 2 extlmm_ex[31:0] $end
+$var reg 32 3 res_fwd_me[31:0] $end
+$var reg 32 4 res_fwd_er[31:0] $end
+$var reg 4 5 op3_ex[3:0] $end
+$var reg 2 6 ea_ex[1:0] $end
+$var reg 2 7 eb_ex[1:0] $end
+$var reg 2 8 aluctrl_ex[1:0] $end
+$var reg 1 9 alusrc_ex $end
+$var reg 4 : cc[3:0] $end
+$var reg 4 ; op3_ex_out[3:0] $end
+$var reg 32 < res_ex[31:0] $end
+$var reg 32 = wd_ex[31:0] $end
+$var reg 32 > npc_fw_br[31:0] $end
+$var reg 32 ? aluop1[31:0] $end
+$var reg 32 @ oper2[31:0] $end
+$var reg 32 A aluop2[31:0] $end
+$var reg 32 B res[31:0] $end
+$scope module alu $end
+$var reg 32 C a[31:0] $end
+$var reg 32 D b[31:0] $end
+$var reg 2 E sel[1:0] $end
+$var reg 32 F res[31:0] $end
+$var reg 4 G cc[3:0] $end
+$var reg 1 H pos $end
+$var reg 1 I c30 $end
+$var reg 1 J c31 $end
+$var reg 1 K z $end
+$var reg 1 L n $end
+$var reg 1 M c $end
+$var reg 1 N v $end
+$var reg 32 O addsig[31:0] $end
+$var reg 32 P sr[31:0] $end
+$var reg 32 Q sl[31:0] $end
+$var reg 32 R bmod[31:0] $end
+$var reg 32 S zint[31:0] $end
+$var reg 32 T resint[31:0] $end
+$scope module forbmod(0) $end
+$upscope $end
+$scope module forbmod(1) $end
+$upscope $end
+$scope module forbmod(2) $end
+$upscope $end
+$scope module forbmod(3) $end
+$upscope $end
+$scope module forbmod(4) $end
+$upscope $end
+$scope module forbmod(5) $end
+$upscope $end
+$scope module forbmod(6) $end
+$upscope $end
+$scope module forbmod(7) $end
+$upscope $end
+$scope module forbmod(8) $end
+$upscope $end
+$scope module forbmod(9) $end
+$upscope $end
+$scope module forbmod(10) $end
+$upscope $end
+$scope module forbmod(11) $end
+$upscope $end
+$scope module forbmod(12) $end
+$upscope $end
+$scope module forbmod(13) $end
+$upscope $end
+$scope module forbmod(14) $end
+$upscope $end
+$scope module forbmod(15) $end
+$upscope $end
+$scope module forbmod(16) $end
+$upscope $end
+$scope module forbmod(17) $end
+$upscope $end
+$scope module forbmod(18) $end
+$upscope $end
+$scope module forbmod(19) $end
+$upscope $end
+$scope module forbmod(20) $end
+$upscope $end
+$scope module forbmod(21) $end
+$upscope $end
+$scope module forbmod(22) $end
+$upscope $end
+$scope module forbmod(23) $end
+$upscope $end
+$scope module forbmod(24) $end
+$upscope $end
+$scope module forbmod(25) $end
+$upscope $end
+$scope module forbmod(26) $end
+$upscope $end
+$scope module forbmod(27) $end
+$upscope $end
+$scope module forbmod(28) $end
+$upscope $end
+$scope module forbmod(29) $end
+$upscope $end
+$scope module forbmod(30) $end
+$upscope $end
+$scope module forbmod(31) $end
+$upscope $end
+$scope module add $end
+$var reg 32 U a[31:0] $end
+$var reg 32 V b[31:0] $end
+$var reg 1 W cin $end
+$var reg 32 X s[31:0] $end
+$var reg 1 Y c30 $end
+$var reg 1 Z c31 $end
+$var reg 33 [ carry[32:0] $end
+$scope module for1(0) $end
+$scope module addi $end
+$var reg 1 \ a $end
+$var reg 1 ] b $end
+$var reg 1 ^ cin $end
+$var reg 1 _ s $end
+$var reg 1 ` cout $end
+$upscope $end
+$upscope $end
+$scope module for1(1) $end
+$scope module addi $end
+$var reg 1 a a $end
+$var reg 1 b b $end
+$var reg 1 c cin $end
+$var reg 1 d s $end
+$var reg 1 e cout $end
+$upscope $end
+$upscope $end
+$scope module for1(2) $end
+$scope module addi $end
+$var reg 1 f a $end
+$var reg 1 g b $end
+$var reg 1 h cin $end
+$var reg 1 i s $end
+$var reg 1 j cout $end
+$upscope $end
+$upscope $end
+$scope module for1(3) $end
+$scope module addi $end
+$var reg 1 k a $end
+$var reg 1 l b $end
+$var reg 1 m cin $end
+$var reg 1 n s $end
+$var reg 1 o cout $end
+$upscope $end
+$upscope $end
+$scope module for1(4) $end
+$scope module addi $end
+$var reg 1 p a $end
+$var reg 1 q b $end
+$var reg 1 r cin $end
+$var reg 1 s s $end
+$var reg 1 t cout $end
+$upscope $end
+$upscope $end
+$scope module for1(5) $end
+$scope module addi $end
+$var reg 1 u a $end
+$var reg 1 v b $end
+$var reg 1 w cin $end
+$var reg 1 x s $end
+$var reg 1 y cout $end
+$upscope $end
+$upscope $end
+$scope module for1(6) $end
+$scope module addi $end
+$var reg 1 z a $end
+$var reg 1 { b $end
+$var reg 1 | cin $end
+$var reg 1 } s $end
+$var reg 1 !" cout $end
+$upscope $end
+$upscope $end
+$scope module for1(7) $end
+$scope module addi $end
+$var reg 1 "" a $end
+$var reg 1 #" b $end
+$var reg 1 $" cin $end
+$var reg 1 %" s $end
+$var reg 1 &" cout $end
+$upscope $end
+$upscope $end
+$scope module for1(8) $end
+$scope module addi $end
+$var reg 1 '" a $end
+$var reg 1 (" b $end
+$var reg 1 )" cin $end
+$var reg 1 *" s $end
+$var reg 1 +" cout $end
+$upscope $end
+$upscope $end
+$scope module for1(9) $end
+$scope module addi $end
+$var reg 1 ," a $end
+$var reg 1 -" b $end
+$var reg 1 ." cin $end
+$var reg 1 /" s $end
+$var reg 1 0" cout $end
+$upscope $end
+$upscope $end
+$scope module for1(10) $end
+$scope module addi $end
+$var reg 1 1" a $end
+$var reg 1 2" b $end
+$var reg 1 3" cin $end
+$var reg 1 4" s $end
+$var reg 1 5" cout $end
+$upscope $end
+$upscope $end
+$scope module for1(11) $end
+$scope module addi $end
+$var reg 1 6" a $end
+$var reg 1 7" b $end
+$var reg 1 8" cin $end
+$var reg 1 9" s $end
+$var reg 1 :" cout $end
+$upscope $end
+$upscope $end
+$scope module for1(12) $end
+$scope module addi $end
+$var reg 1 ;" a $end
+$var reg 1 <" b $end
+$var reg 1 =" cin $end
+$var reg 1 >" s $end
+$var reg 1 ?" cout $end
+$upscope $end
+$upscope $end
+$scope module for1(13) $end
+$scope module addi $end
+$var reg 1 @" a $end
+$var reg 1 A" b $end
+$var reg 1 B" cin $end
+$var reg 1 C" s $end
+$var reg 1 D" cout $end
+$upscope $end
+$upscope $end
+$scope module for1(14) $end
+$scope module addi $end
+$var reg 1 E" a $end
+$var reg 1 F" b $end
+$var reg 1 G" cin $end
+$var reg 1 H" s $end
+$var reg 1 I" cout $end
+$upscope $end
+$upscope $end
+$scope module for1(15) $end
+$scope module addi $end
+$var reg 1 J" a $end
+$var reg 1 K" b $end
+$var reg 1 L" cin $end
+$var reg 1 M" s $end
+$var reg 1 N" cout $end
+$upscope $end
+$upscope $end
+$scope module for1(16) $end
+$scope module addi $end
+$var reg 1 O" a $end
+$var reg 1 P" b $end
+$var reg 1 Q" cin $end
+$var reg 1 R" s $end
+$var reg 1 S" cout $end
+$upscope $end
+$upscope $end
+$scope module for1(17) $end
+$scope module addi $end
+$var reg 1 T" a $end
+$var reg 1 U" b $end
+$var reg 1 V" cin $end
+$var reg 1 W" s $end
+$var reg 1 X" cout $end
+$upscope $end
+$upscope $end
+$scope module for1(18) $end
+$scope module addi $end
+$var reg 1 Y" a $end
+$var reg 1 Z" b $end
+$var reg 1 [" cin $end
+$var reg 1 \" s $end
+$var reg 1 ]" cout $end
+$upscope $end
+$upscope $end
+$scope module for1(19) $end
+$scope module addi $end
+$var reg 1 ^" a $end
+$var reg 1 _" b $end
+$var reg 1 `" cin $end
+$var reg 1 a" s $end
+$var reg 1 b" cout $end
+$upscope $end
+$upscope $end
+$scope module for1(20) $end
+$scope module addi $end
+$var reg 1 c" a $end
+$var reg 1 d" b $end
+$var reg 1 e" cin $end
+$var reg 1 f" s $end
+$var reg 1 g" cout $end
+$upscope $end
+$upscope $end
+$scope module for1(21) $end
+$scope module addi $end
+$var reg 1 h" a $end
+$var reg 1 i" b $end
+$var reg 1 j" cin $end
+$var reg 1 k" s $end
+$var reg 1 l" cout $end
+$upscope $end
+$upscope $end
+$scope module for1(22) $end
+$scope module addi $end
+$var reg 1 m" a $end
+$var reg 1 n" b $end
+$var reg 1 o" cin $end
+$var reg 1 p" s $end
+$var reg 1 q" cout $end
+$upscope $end
+$upscope $end
+$scope module for1(23) $end
+$scope module addi $end
+$var reg 1 r" a $end
+$var reg 1 s" b $end
+$var reg 1 t" cin $end
+$var reg 1 u" s $end
+$var reg 1 v" cout $end
+$upscope $end
+$upscope $end
+$scope module for1(24) $end
+$scope module addi $end
+$var reg 1 w" a $end
+$var reg 1 x" b $end
+$var reg 1 y" cin $end
+$var reg 1 z" s $end
+$var reg 1 {" cout $end
+$upscope $end
+$upscope $end
+$scope module for1(25) $end
+$scope module addi $end
+$var reg 1 |" a $end
+$var reg 1 }" b $end
+$var reg 1 !# cin $end
+$var reg 1 "# s $end
+$var reg 1 ## cout $end
+$upscope $end
+$upscope $end
+$scope module for1(26) $end
+$scope module addi $end
+$var reg 1 $# a $end
+$var reg 1 %# b $end
+$var reg 1 &# cin $end
+$var reg 1 '# s $end
+$var reg 1 (# cout $end
+$upscope $end
+$upscope $end
+$scope module for1(27) $end
+$scope module addi $end
+$var reg 1 )# a $end
+$var reg 1 *# b $end
+$var reg 1 +# cin $end
+$var reg 1 ,# s $end
+$var reg 1 -# cout $end
+$upscope $end
+$upscope $end
+$scope module for1(28) $end
+$scope module addi $end
+$var reg 1 .# a $end
+$var reg 1 /# b $end
+$var reg 1 0# cin $end
+$var reg 1 1# s $end
+$var reg 1 2# cout $end
+$upscope $end
+$upscope $end
+$scope module for1(29) $end
+$scope module addi $end
+$var reg 1 3# a $end
+$var reg 1 4# b $end
+$var reg 1 5# cin $end
+$var reg 1 6# s $end
+$var reg 1 7# cout $end
+$upscope $end
+$upscope $end
+$scope module for1(30) $end
+$scope module addi $end
+$var reg 1 8# a $end
+$var reg 1 9# b $end
+$var reg 1 :# cin $end
+$var reg 1 ;# s $end
+$var reg 1 <# cout $end
+$upscope $end
+$upscope $end
+$scope module for1(31) $end
+$scope module addi $end
+$var reg 1 =# a $end
+$var reg 1 ># b $end
+$var reg 1 ?# cin $end
+$var reg 1 @# s $end
+$var reg 1 A# cout $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module for1(1) $end
+$upscope $end
+$scope module for1(2) $end
+$upscope $end
+$scope module for1(3) $end
+$upscope $end
+$scope module for1(4) $end
+$upscope $end
+$scope module for1(5) $end
+$upscope $end
+$scope module for1(6) $end
+$upscope $end
+$scope module for1(7) $end
+$upscope $end
+$scope module for1(8) $end
+$upscope $end
+$scope module for1(9) $end
+$upscope $end
+$scope module for1(10) $end
+$upscope $end
+$scope module for1(11) $end
+$upscope $end
+$scope module for1(12) $end
+$upscope $end
+$scope module for1(13) $end
+$upscope $end
+$scope module for1(14) $end
+$upscope $end
+$scope module for1(15) $end
+$upscope $end
+$scope module for1(16) $end
+$upscope $end
+$scope module for1(17) $end
+$upscope $end
+$scope module for1(18) $end
+$upscope $end
+$scope module for1(19) $end
+$upscope $end
+$scope module for1(20) $end
+$upscope $end
+$scope module for1(21) $end
+$upscope $end
+$scope module for1(22) $end
+$upscope $end
+$scope module for1(23) $end
+$upscope $end
+$scope module for1(24) $end
+$upscope $end
+$scope module for1(25) $end
+$upscope $end
+$scope module for1(26) $end
+$upscope $end
+$scope module for1(27) $end
+$upscope $end
+$scope module for1(28) $end
+$upscope $end
+$scope module for1(29) $end
+$upscope $end
+$scope module for1(30) $end
+$upscope $end
+$scope module for1(31) $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+b00000000000000000000000000000100 !
+b00000000000000000000000000000010 "
+b00000000000000000000000000000000 #
+b00000000000000000000000000000000 $
+b00000000000000000000000000000000 %
+b0000 &
+b00 '
+b00 (
+b00 )
+0*
+b0000 +
+b0000 ,
+b00000000000000000000000000000110 -
+b00000000000000000000000000000010 .
+b00000000000000000000000000000110 /
+b00000000000000000000000000000100 0
+b00000000000000000000000000000010 1
+b00000000000000000000000000000000 2
+b00000000000000000000000000000000 3
+b00000000000000000000000000000000 4
+b0000 5
+b00 6
+b00 7
+b00 8
+09
+b0000 :
+b0000 ;
+b00000000000000000000000000000110 <
+b00000000000000000000000000000010 =
+b00000000000000000000000000000110 >
+b00000000000000000000000000000100 ?
+b00000000000000000000000000000010 @
+b00000000000000000000000000000010 A
+b00000000000000000000000000000110 B
+b00000000000000000000000000000100 C
+b00000000000000000000000000000010 D
+b00 E
+b00000000000000000000000000000110 F
+b0000 G
+UH
+0I
+0J
+0K
+0L
+0M
+0N
+b00000000000000000000000000000110 O
+bUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU P
+bUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU Q
+b00000000000000000000000000000010 R
+b11111111111111111111111111111110 S
+b00000000000000000000000000000110 T
+b00000000000000000000000000000100 U
+b00000000000000000000000000000010 V
+0W
+b00000000000000000000000000000110 X
+0Y
+0Z
+b000000000000000000000000000000000 [
+0\
+0]
+0^
+0_
+0`
+0a
+1b
+0c
+1d
+0e
+1f
+0g
+0h
+1i
+0j
+0k
+0l
+0m
+0n
+0o
+0p
+0q
+0r
+0s
+0t
+0u
+0v
+0w
+0x
+0y
+0z
+0{
+0|
+0}
+0!"
+0""
+0#"
+0$"
+0%"
+0&"
+0'"
+0("
+0)"
+0*"
+0+"
+0,"
+0-"
+0."
+0/"
+00"
+01"
+02"
+03"
+04"
+05"
+06"
+07"
+08"
+09"
+0:"
+0;"
+0<"
+0="
+0>"
+0?"
+0@"
+0A"
+0B"
+0C"
+0D"
+0E"
+0F"
+0G"
+0H"
+0I"
+0J"
+0K"
+0L"
+0M"
+0N"
+0O"
+0P"
+0Q"
+0R"
+0S"
+0T"
+0U"
+0V"
+0W"
+0X"
+0Y"
+0Z"
+0["
+0\"
+0]"
+0^"
+0_"
+0`"
+0a"
+0b"
+0c"
+0d"
+0e"
+0f"
+0g"
+0h"
+0i"
+0j"
+0k"
+0l"
+0m"
+0n"
+0o"
+0p"
+0q"
+0r"
+0s"
+0t"
+0u"
+0v"
+0w"
+0x"
+0y"
+0z"
+0{"
+0|"
+0}"
+0!#
+0"#
+0##
+0$#
+0%#
+0&#
+0'#
+0(#
+0)#
+0*#
+0+#
+0,#
+0-#
+0.#
+0/#
+00#
+01#
+02#
+03#
+04#
+05#
+06#
+07#
+08#
+09#
+0:#
+0;#
+0<#
+0=#
+0>#
+0?#
+0@#
+0A#
+#15000000
+b00000000000000000000000000000000 !
+b00000000000000000000000000000000 "
+b0100 +
+b00000000000000000000000000000000 -
+b00000000000000000000000000000000 .
+b00000000000000000000000000000000 /
+b00000000000000000000000000000000 0
+b00000000000000000000000000000000 1
+b0100 :
+b00000000000000000000000000000000 <
+b00000000000000000000000000000000 =
+b00000000000000000000000000000000 >
+b00000000000000000000000000000000 ?
+b00000000000000000000000000000000 @
+b00000000000000000000000000000000 A
+b00000000000000000000000000000000 B
+b00000000000000000000000000000000 C
+b00000000000000000000000000000000 D
+b00000000000000000000000000000000 F
+b0100 G
+1K
+b00000000000000000000000000000000 O
+b00000000000000000000000000000000 R
+b00000000000000000000000000000000 S
+b00000000000000000000000000000000 T
+b00000000000000000000000000000000 U
+b00000000000000000000000000000000 V
+b00000000000000000000000000000000 X
+0b
+0d
+0f
+0i
+#30000000
