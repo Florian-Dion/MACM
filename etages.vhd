@@ -45,12 +45,44 @@ end architecture;
 
 -- -- Etage DE
 
--- LIBRARY IEEE;
--- USE IEEE.STD_LOGIC_1164.ALL;
--- USE IEEE.NUMERIC_STD.ALL;
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
 
--- entity etageDE is
--- end entity
+entity etageDE is
+  port(
+    i_DE, WD_ER, pc_plus_4 : in std_logic_vector(31 downto 0);
+    Op3_ER : in std_logic_vector(3 downto 0);
+    RegSrc, immSrc : in std_logic_vector(1 downto 0);
+    RegWr, clk, Init : in std_logic;
+    Reg1, Reg2 : out std_logic_vector(3 downto 0);
+    Op1, Op2, extlmm : out std_logic_vector(31 downto 0);
+    Op3_DE : out std_logic_vector(3 downto 0)
+  );
+end entity;
+
+architecture arch_etageDE of etageDE is
+  signal sigOp1, sigOp2, sig_15 : std_logic_vector(3 downto 0);
+begin
+  sig_15 <= "1111";
+  sigOp1 <= i_DE(19 downto 16) when RegSrc(0) = '0' else
+            sig_15;
+  sigOp2 <= i_DE(3 downto 0) when RegSrc(1) = '0' else
+            i_DE(15 downto 12);
+
+  Op3_DE <= i_DE(15 downto 12);
+
+  ext: entity work.extension
+    port map(i_DE(23 downto 0), immSrc, extlmm);
+
+  Reg1 <= sigOp1;
+  Reg2 <= sigOp2;
+
+  registre: entity work.RegisterBank
+    port map(sigOp1, Op1, sigOp2, Op2, Op3_ER, WD_ER, pc_plus_4, Init, RegWr, clk);
+
+
+end architecture;
 
 -- -------------------------------------------------
 
@@ -104,12 +136,35 @@ end architecture;
 
 -- -- Etage ME
 
--- LIBRARY IEEE;
--- USE IEEE.STD_LOGIC_1164.ALL;
--- USE IEEE.NUMERIC_STD.ALL;
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
 
--- entity etageME is
--- end entity
+entity etageME is
+  port(
+    Res_ME, WD_ME : in std_logic_vector(31 downto 0);
+    Op3_ME : in std_logic_vector(3 downto 0);
+    clk : in std_logic;
+    MemWR_Mem : in std_logic;
+    Res_Mem_ME : out std_logic_vector(31 downto 0);
+    Res_ALU_ME : out std_logic_vector(31 downto 0);
+    Op3_ME_out : out std_logic_vector(3 downto 0);
+    Res_fwd_ME : out std_logic_vector(31 downto 0)
+  );
+end entity;
+
+architecture arch_etageME of etageME is
+begin
+  mem_data: entity work.data_mem
+    port map(Res_ME, WD_ME, clk, MemWR_Mem, Res_Mem_ME);
+  
+  Res_ALU_ME <= Res_ME;
+  Res_fwd_ME <= Res_ME;
+  Op3_ME_out <= Op3_ME;
+
+end architecture;
+
+
 -- -------------------------------------------------
 
 -- -- Etage ER

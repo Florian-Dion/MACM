@@ -1,0 +1,179 @@
+$date
+  Thu Mar 21 15:07:51 2024
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module numeric_std $end
+$upscope $end
+$scope module bus_mux_pkg $end
+$upscope $end
+$scope module test_etage_de $end
+$var reg 32 ! i_de[31:0] $end
+$var reg 32 " wd_er[31:0] $end
+$var reg 32 # pc_plus_4[31:0] $end
+$var reg 4 $ op3_er[3:0] $end
+$var reg 2 % regsrc[1:0] $end
+$var reg 2 & immsrc[1:0] $end
+$var reg 1 ' regwr $end
+$var reg 1 ( e_clk $end
+$var reg 1 ) init $end
+$var reg 4 * reg1[3:0] $end
+$var reg 4 + reg2[3:0] $end
+$var reg 32 , op1[31:0] $end
+$var reg 32 - op2[31:0] $end
+$var reg 32 . extlmm[31:0] $end
+$var reg 4 / op3_de[3:0] $end
+$scope module deco $end
+$var reg 32 0 i_de[31:0] $end
+$var reg 32 1 wd_er[31:0] $end
+$var reg 32 2 pc_plus_4[31:0] $end
+$var reg 4 3 op3_er[3:0] $end
+$var reg 2 4 regsrc[1:0] $end
+$var reg 2 5 immsrc[1:0] $end
+$var reg 1 6 regwr $end
+$var reg 1 7 clk $end
+$var reg 1 8 init $end
+$var reg 4 9 reg1[3:0] $end
+$var reg 4 : reg2[3:0] $end
+$var reg 32 ; op1[31:0] $end
+$var reg 32 < op2[31:0] $end
+$var reg 32 = extlmm[31:0] $end
+$var reg 4 > op3_de[3:0] $end
+$var reg 4 ? sigop1[3:0] $end
+$var reg 4 @ sigop2[3:0] $end
+$var reg 4 A sig_15[3:0] $end
+$scope module ext $end
+$var reg 24 B immin[23:0] $end
+$var reg 2 C immsrc[1:0] $end
+$var reg 32 D extout[31:0] $end
+$var reg 32 E extimm12[31:0] $end
+$var reg 32 F extimm24[31:0] $end
+$var reg 20 G extsign20[19:0] $end
+$var reg 8 H extsign8[7:0] $end
+$var reg 8 I zeros[7:0] $end
+$upscope $end
+$scope module registre $end
+$var reg 4 J s_reg_0[3:0] $end
+$var reg 32 K data_o_0[31:0] $end
+$var reg 4 L s_reg_1[3:0] $end
+$var reg 32 M data_o_1[31:0] $end
+$var reg 4 N dest_reg[3:0] $end
+$var reg 32 O data_i[31:0] $end
+$var reg 32 P pc_in[31:0] $end
+$var reg 1 Q init $end
+$var reg 1 R wr_reg $end
+$var reg 1 S clk $end
+$comment regs is not handled $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+b11110000100100100011000000001000 !
+b11111111111111111111111111111111 "
+b00000000000000000000000000000000 #
+b0010 $
+b00 %
+b00 &
+0'
+1(
+1)
+b0010 *
+b1000 +
+b00000000000000000000000000000000 ,
+b00000000000000000000000000000000 -
+b00000000000000000000000000001000 .
+b0011 /
+b11110000100100100011000000001000 0
+b11111111111111111111111111111111 1
+b00000000000000000000000000000000 2
+b0010 3
+b00 4
+b00 5
+06
+17
+18
+b0010 9
+b1000 :
+b00000000000000000000000000000000 ;
+b00000000000000000000000000000000 <
+b00000000000000000000000000001000 =
+b0011 >
+b0010 ?
+b1000 @
+b1111 A
+b100100100011000000001000 B
+b00 C
+b00000000000000000000000000001000 D
+b00000000000000000000000000001000 E
+b11111111100100100011000000001000 F
+b00000000000000000000 G
+b11111111 H
+bUUUUUUUU I
+b0010 J
+b00000000000000000000000000000000 K
+b1000 L
+b00000000000000000000000000000000 M
+b0010 N
+b11111111111111111111111111111111 O
+b00000000000000000000000000000000 P
+1Q
+0R
+1S
+#5000000
+0(
+07
+0S
+#10000000
+1(
+17
+1S
+#15000000
+1'
+0(
+0)
+16
+07
+08
+0Q
+1R
+0S
+#20000000
+1(
+b11111111111111111111111111111111 ,
+17
+b11111111111111111111111111111111 ;
+b11111111111111111111111111111111 K
+1S
+#25000000
+0(
+07
+0S
+#30000000
+1(
+17
+1S
+#35000000
+0(
+07
+0S
+#40000000
+1(
+17
+1S
+#45000000
+0(
+07
+0S
+#50000000
+1(
+17
+1S
