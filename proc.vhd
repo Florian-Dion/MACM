@@ -21,6 +21,11 @@ architecture dataPath_arch of dataPath is
   signal Op3_DE, Op3_EX, a1_DE, a1_EX, a2_DE, a2_EX, Op3_EX_out_t, Op3_ME, Op3_ME_out_t, Op3_RE, Op3_RE_out_t : std_logic_vector(3 downto 0);
 begin
 
+  decodeur: entity work.decodeur
+    port map(
+        instr_DE, PCSrc, RegWr, MemToReg, MemWr, Branch, CCWr, AluSrc, ALUCtrl_EX, ImmSrc, RegSrc, Cond
+    );
+
   -- FE
 
   npc <=Res_RE;

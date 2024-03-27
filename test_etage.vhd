@@ -14,7 +14,6 @@ architecture archi_test_etage of test_etage is
     signal RegSrc, EA_EX, EB_EX, immSrc, ALUCtrl_EX : std_logic_vector(1 downto 0);
     signal instr_DE: std_logic_vector(31 downto 0);
     signal a1, a2, rs1, rs2, CC, op3_EX_out, op3_ME_out, op3_RE_out: std_logic_vector(3 downto 0)
-);   
 begin
 
 -- definition de l'horloge
@@ -72,5 +71,12 @@ begin
 PCSrc_ER <= '1';
 Bpris_EX <= '1';
 GEL_LI <= '1';
+
+-- LATEST COMMAND (NE PAS ENLEVER !!!)
+wait until E_CLK='1'; wait for clkpulse/2;
+assert FALSE report "FIN DE SIMULATION" severity FAILURE;
+-- assert (NOW < TIMEOUT) report "FIN DE SIMULATION" severity FAILURE;
+
+end process P_TEST;
 
 end architecture archi_test_etage;
