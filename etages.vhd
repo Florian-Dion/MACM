@@ -27,7 +27,7 @@ begin
   pc_reg_in <= pc_inter when Bpris_EX = '0' else npc_fw_br;
 
 
-  pc_reg: entity work.Reg32sync
+  pc_reg: entity work.Reg32
     port map(pc_reg_in, pc_reg_out, GEL_LI, '1', clk);
 
   add: entity work.addComplex
@@ -169,9 +169,25 @@ end architecture;
 
 -- -- Etage ER
 
--- LIBRARY IEEE;
--- USE IEEE.STD_LOGIC_1164.ALL;
--- USE IEEE.NUMERIC_STD.ALL;
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
 
--- entity etageER is
--- end entity
+entity etageER is
+  port(
+    Res_Mem_RE, Res_ALU_RE : in std_logic_vector(31 downto 0);
+    Op3_RE : in std_logic_vector(3 downto 0);
+    MemToReg_RE : in std_logic;
+    Res_RE : out std_logic_vector(31 downto 0);
+    Op3_RE_out : out std_logic_vector(3 downto 0)
+  );
+end entity;
+
+architecture arch_etageER of etageER is
+begin
+  Res_RE <= Res_Mem_RE when MemToReg_RE = '1' else
+            Res_ALU_RE;
+
+  Op3_RE_out <= Op3_RE;
+
+end architecture;
