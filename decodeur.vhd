@@ -33,7 +33,7 @@ begin
     ImmSrc <= instr(27 downto 26);
 
     RegWr <= '1' when instr(27 downto 26) = "00" and instr(25) = '0' and instr(20) = '0' else
-                '0' when instr(27 downto 26) = "00" and instr(25) = '0' and instr(20) = '1' else
+                '0' when instr(27 downto 26) = "00" and instr(25) = '0' and instr(20) = '1' and instr(24 downto 21) = "1010" else
                 '1' when instr(27 downto 26) = "00" and instr(25) = '1' else
                 '1' when instr(27 downto 26) = "01" and instr(20) ='1' else
                 '0' when instr(27 downto 26) = "01" and instr(20) ='0' else
