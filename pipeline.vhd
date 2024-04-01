@@ -4,30 +4,30 @@ USE IEEE.NUMERIC_STD.ALL;
 
 entity pipeline is
     port (
-        Bpris_EX, Gel_LI, RAZ_DI, Clr_EX, Init : in std_logic;
+        Gel_LI, Gel_DI, RAZ_DI, Clr_EX, Init : in std_logic;
         EA_EX, EB_EX : in std_logic_vector(1 downto 0);
         a1, a2, rs1, rs2, op3_EX_out, op3_ME_out, op3_RE_out : out std_logic_vector(3 downto 0);
-        clk : in std_logic,
-    )
+        clk : in std_logic
+    );
 end pipeline;
 
 architecture pipeline of pipeline is
     signal instr : std_logic_vector(31 downto 0);
-    signal PCSrc, RegWr, MemToReg, MemWr, Branch, AluSrc, RegWr_EX, PCSrc_EX, MemWr_EX, Branch_EX, MemToReg_EX, AluSrc_EX : std_logic;
+    signal PCSrc, RegWr, MemToReg, MemWr, Branch, AluSrc, RegWr_EX, PCSrc_EX, MemWr_EX, Branch_EX, MemToReg_EX, MemToReg_RE, MemToReg_mem, AluSrc_EX, CondEx, and1, and2, and3, and4, and1_mem, and2_mem, and3_mem, and1_ER, and2_ER, CCWr, CCWr_EX, Bpris_EX : std_logic;
     signal AluCtrl, ImmSrc, RegSrc, AluCtrl_EX : std_logic_vector(1 downto 0);
-    signal Cond, CCWr, CCWr_EX : std_logic_vector(3 downto 0);
+    signal Cond, Cond_out, CC, CCp, CC_EX : std_logic_vector(3 downto 0);
 begin
 
-    proc: entity work.proc
+    proc: entity work.dataPath
         port map (
-            clk,  ALUSrc, MemWr, PCSrc, Bpris_EX, Gel_LI, Gel_DI, RAZ_DI, RegWR, Clr_EX, MemToReg, Init, RegSrc, EA_EX, EB_EX, ImmSrc, ALUCtrl
-            instr, a1, a2, rs1, rs2, CCWr, op3_EX_out, op3_ME_out, op3_RE_out
+            clk,  ALUSrc_EX, and3_mem, and2_ER, Bpris_EX, Gel_LI, Gel_DI, RAZ_DI, and1_ER, Clr_EX, MemToReg_RE, Init, RegSrc, EA_EX, EB_EX, ImmSrc, AluCtrl_EX,
+            instr, a1, a2, rs1, rs2, CC, op3_EX_out, op3_ME_out, op3_RE_out
         );
 
     decodeur: entity work.decodeur
         port map (
             instr, PCSrc, RegWr, MemToReg, MemWr, Branch, CCWr, AluSrc, AluCtrl, ImmSrc, RegSrc, Cond
-        )
+        );
 
     re1: entity work.Reg1
         port map (
@@ -49,7 +49,7 @@ begin
             MemWr, MemWr_EX, '1', '1', clk
         );
 
-    re5: entity work.Reg1
+    re5: entity work.Reg2
     port map (
         AluCtrl, AluCtrl_EX, '1', '1', clk
     );
@@ -69,9 +69,63 @@ begin
         AluSrc, AluSrc_EX, '1', '1', clk
     );
 
+    re9: entity work.Reg4
+    port map (
+        Cond, Cond_out, '1', '1', clk
+    );
+
+    re10: entity work.Reg4
+    port map (
+        CCp, CC_EX, '1', '1', clk
+    );
+
     condition: entity work.condition
         port map (
-            CCWr_EX : in std_logic;
-        CCp : out std_logic_vector(3 downto 0);
-        CondEx : buffer std_logic
+        Cond_out, CC_EX, CC, CCWr_EX, CCp, CondEx
         );
+
+    and1 <= RegWr_EX and CondEx;
+    and2 <= PCSrc_EX and CondEx;
+    and3 <= MemWr_EX and CondEx;
+    and4 <= Branch_EX and CondEx;
+
+    Bpris_EX <= and4;
+
+    re11: entity work.Reg1
+    port map (
+        and1, and1_mem, '1', '1', clk
+    );
+
+    re12: entity work.Reg1
+    port map (
+        and2, and2_mem, '1', '1', clk
+    );
+
+    re13: entity work.Reg1
+    port map (
+        and3, and3_mem, '1', '1', clk
+    );
+
+    re14: entity work.Reg1
+    port map (
+        MemToReg_EX, MemToReg_mem, '1', '1', clk
+    );
+
+    re15: entity work.Reg1
+    port map (
+        and1_mem, and1_ER, '1', '1', clk
+    );
+
+
+    re16: entity work.Reg1
+    port map (
+        and2_mem, and2_ER, '1', '1', clk
+    );
+
+    re17: entity work.Reg1
+    port map (
+        MemToReg_mem, MemToReg_RE, '1', '1', clk
+    );
+
+
+end architecture;
