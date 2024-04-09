@@ -44,11 +44,15 @@ pipe: entity work.pipeline
         Gel_DI <= '1';
         RAZ_DI <= '1';
         Clr_EX <= '1';
-        Init <= '0';
-        EA_EX <= "00";
-        EB_EX <= "00";
+        Init <= '1';
+        EA_EX <= "01";
+        EB_EX <= "10";
 
-        wait for 30 ns;
+        wait for 1 ns;
+
+        Init <= '0';
+
+        wait for 100 ns;
         
     
     

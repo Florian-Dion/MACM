@@ -57,8 +57,8 @@ begin
       RegWr=>RegWr,
       clk=>clk,
       Init=>Init,
-      Reg1=>a1,
-      Reg2=>a2,
+      Reg1=>a1_DE,
+      Reg2=>a2_DE,
       Op1=>Op1_DE,
       Op2=>Op2_DE,
       extlmm=>extImm_DE,
@@ -82,6 +82,9 @@ begin
       raz=>Clr_EX,
       clk=>clk
     );
+
+    a1 <= a1_EX;
+    a2 <= a2_EX;
 
     reg4: entity work.Reg32sync
     port map(
