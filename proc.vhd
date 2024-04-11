@@ -65,6 +65,9 @@ begin
       Op3_DE=>Op3_DE
     );
 
+    rs1 <= a1_DE;
+    rs2 <= a2_DE;
+
     reg2: entity work.Reg4
     port map(
       source=>a1_DE,

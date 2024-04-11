@@ -40,19 +40,21 @@ pipe: entity work.pipeline
 
     P_TEST: process
     begin
+        Init <= '1';
         Gel_LI <= '1';
         Gel_DI <= '1';
         RAZ_DI <= '1';
         Clr_EX <= '1';
-        Init <= '1';
-        EA_EX <= "01";
-        EB_EX <= "10";
+        EA_EX <= "00";
+        EB_EX <= "00";
+
+
 
         wait for 1 ns;
 
         Init <= '0';
 
-        wait for 100 ns;
+        wait for 200 ns;
         
     
     

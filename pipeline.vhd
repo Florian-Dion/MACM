@@ -16,6 +16,9 @@ architecture pipeline of pipeline is
     signal PCSrc, RegWr, MemToReg, MemWr, Branch, AluSrc, RegWr_EX, PCSrc_EX, MemWr_EX, Branch_EX, MemToReg_EX, MemToReg_RE, MemToReg_mem, AluSrc_EX, CondEx, and1, and2, and3, and4, and1_mem, and2_mem, and3_mem, and1_ER, and2_ER, CCWr, CCWr_EX, Bpris_EX : std_logic;
     signal AluCtrl, ImmSrc, RegSrc, AluCtrl_EX : std_logic_vector(1 downto 0);
     signal Cond, Cond_out, CC, CCp, CC_EX : std_logic_vector(3 downto 0);
+    --signal Gel_LI, Gel_DI, RAZ_DI, Clr_EX : std_logic;
+    --signal EA_EX, EB_EX : std_logic_vector(1 downto 0);
+    --signal a1, a2, rs1, rs2, op3_EX_out, op3_ME_out, op3_RE_out : std_logic_vector(3 downto 0);
 begin
 
     proc: entity work.dataPath
@@ -28,6 +31,13 @@ begin
         port map (
             instr, PCSrc, RegWr, MemToReg, MemWr, Branch, CCWr, AluSrc, AluCtrl, ImmSrc, RegSrc, Cond
         );
+
+    --UGA: entity work.UGA
+        --port map (
+          --  Gel_LI, Gel_DI, RAZ_DI, Clr_EX, and1_mem, and1_ER, PCSrc, and2_mem, PCSrc_EX, and2_ER, MemToReg_EX, Bpris_EX, 
+            --EA_EX, EB_EX, a1, a2, op3_EX_out, op3_ME_out, op3_RE_out, rs1, rs2, clk
+        --);
+
 
     re1: entity work.Reg1
         port map (

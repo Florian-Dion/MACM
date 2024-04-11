@@ -1,80 +1,83 @@
 v 4
-file . "pipeline.vhd" "b5637f36291beabee3b5349188db90c6c1c2a9e0" "20240409172854.586":
-  entity pipeline at 1( 0) + 0 on 2246;
-  architecture pipeline of pipeline at 14( 376) + 0 on 2247;
-file . "test_condition.vhd" "04a77c569c2d8714cd72a8b525636b4e2cb01bfe" "20240328131019.549":
-  entity test_condition at 1( 0) + 0 on 1114;
-  architecture archi_test_condition of test_condition at 9( 124) + 0 on 1115;
-file . "condition.vhd" "ba7336091de678db2e9a71bf1b326af9faeed9b2" "20240409172854.584":
-  entity condition at 1( 0) + 0 on 2242;
-  architecture condition of condition at 14( 310) + 0 on 2243;
-file . "test_decodeur.vhd" "396d9966994a430e206dcfc1f9c1988fe3cca6b8" "20240327180626.035":
-  entity test_decodeur at 1( 0) + 0 on 1015;
-  architecture archi_test_decodeur of test_decodeur at 9( 122) + 0 on 1016;
-file . "decodeur.vhd" "1562ced88a8d3a7168a8a39cae968c533c825666" "20240409172854.585":
-  entity decodeur at 1( 0) + 0 on 2244;
-  architecture archdecodeur of decodeur at 14( 377) + 0 on 2245;
-file . "test_etage_mem.vhd" "c88dc92c4ee47310c70f76cd79e9b9ddd9425dee" "20240321143046.537":
-  entity test_etage_mem at 1( 0) + 0 on 908;
-  architecture arch_test_etage_mem of test_etage_mem at 8( 123) + 0 on 909;
-file . "test_etage_de.vhd" "3f0cd0220c48a6fc885440e26ac023169ce95803" "20240409165746.481":
-  entity test_etage_de at 1( 0) + 0 on 2052;
-  architecture arch_test_etage_de of test_etage_de at 9( 130) + 0 on 2053;
-file . "test_etage_fe.vhd" "5020cf1184f19fc3d2240608b57d1e6977374052" "20240314143552.012":
-  entity test_etage_fe at 1( 0) + 0 on 240;
-  architecture archi_test_etage_fe of test_etage_fe at 9( 122) + 0 on 241;
-file . "etages.vhd" "ac8083c924a505642ccf151cbee77a9f4656eb68" "20240409172854.579":
-  entity etagefe at 5( 68) + 0 on 2230;
-  architecture etagefe_arch of etagefe at 19( 359) + 0 on 2231;
-  entity etagede at 48( 1055) + 0 on 2232;
-  architecture arch_etagede of etagede at 64( 1540) + 0 on 2233;
-  entity etageex at 91( 2223) + 1 on 2234;
-  architecture arch_etageex of etageex at 106( 2709) + 1 on 2235;
-  entity etageme at 139( 3623) + 0 on 2236;
-  architecture arch_etageme of etageme at 156( 4114) + 0 on 2237;
-  entity etageer at 172( 4432) + 0 on 2238;
-  architecture arch_etageer of etageer at 186( 4799) + 0 on 2239;
-file . "reg_bank.vhd" "2700763eba8d9b3ac450aa46cbd418c4a399337e" "20240409172854.571":
-  package bus_mux_pkg at 1( 0) + 0 on 2217;
-  entity reg32 at 13( 301) + 0 on 2218;
-  architecture arch_reg of reg32 at 25( 553) + 0 on 2219;
-  entity reg32sync at 47( 1046) + 0 on 2220;
-  architecture arch_reg_sync of reg32sync at 59( 1302) + 0 on 2221;
-  entity reg4 at 82( 1803) + 0 on 2222;
-  architecture arch_reg of reg4 at 94( 2052) + 0 on 2223;
-  entity reg2 at 116( 2540) + 0 on 2224;
-  architecture arch_reg of reg2 at 128( 2789) + 0 on 2225;
-  entity reg1 at 150( 3276) + 0 on 2226;
-  architecture arch_reg of reg1 at 162( 3487) + 0 on 2227;
-  entity registerbank at 185( 3906) + 0 on 2228;
-  architecture arch_reg_bank of registerbank at 207( 4506) + 0 on 2229;
-file . "mem.vhd" "476848092ef44dd61e091a0889f313ae3eac90a2" "20240409172854.560":
-  entity imem at 5( 90) + 0 on 2209;
-  architecture behave of imem at 12( 324) + 0 on 2210;
-  entity inst_mem at 64( 1936) + 0 on 2211;
-  architecture arch_inst_mem of inst_mem at 76( 2158) + 0 on 2212;
-  entity dmem at 87( 2382) + 0 on 2213;
-  architecture behave of dmem at 96( 2653) + 0 on 2214;
-  entity data_mem at 119( 3255) + 0 on 2215;
-  architecture arch_data_mem of data_mem at 133( 3511) + 0 on 2216;
-file . "combi.vhd" "e3f7868a24dd1872a2c760459c2375cb8ca1af9f" "20240409172854.551":
-  entity fulladd1b at 6( 105) + 0 on 2201;
-  architecture arche_full_add of fulladd1b at 17( 292) + 0 on 2202;
-  entity addcomplex at 24( 450) + 0 on 2203;
-  architecture arch_add_complex of addcomplex at 36( 714) + 0 on 2204;
-  entity alu at 54( 1107) + 0 on 2205;
-  architecture arch_alu of alu at 70( 1458) + 0 on 2206;
-  entity extension at 108( 2427) + 0 on 2207;
-  architecture arch_ext of extension at 120( 2696) + 0 on 2208;
-file . "test_etage_ex.vhd" "7587a882e25825541223995fd32f4151456d1216" "20240321142525.068":
-  entity test_etage_ex at 1( 0) + 0 on 869;
-  architecture archi_test_etage_ex of test_etage_ex at 9( 122) + 0 on 870;
+file . "test_pipeline.vhd" "b151f01c11fa3afa8ca1acbff5987f345db62615" "20240411134554.410":
+  entity test_pipeline at 1( 0) + 0 on 2791;
+  architecture arch_test_pipeline of test_pipeline at 9( 130) + 0 on 2792;
+file . "proc.vhd" "fada2713cee6f2f10979613046f4da69613b32e3" "20240411134554.406":
+  entity datapath at 5( 84) + 0 on 2781;
+  architecture datapath_arch of datapath at 19( 567) + 0 on 2782;
 file . "test_etage_er.vhd" "4ffc256d24ebf9445f4d2e6cf42106c2b2570836" "20240327124458.404":
   entity test_etage_er at 1( 0) + 0 on 949;
   architecture arch_test_etage_er of test_etage_er at 8( 121) + 0 on 950;
-file . "proc.vhd" "d66aca15abd0cfd986017cbfc530d9111b8a5df8" "20240409172854.582":
-  entity datapath at 5( 84) + 0 on 2240;
-  architecture datapath_arch of datapath at 19( 567) + 0 on 2241;
-file . "test_pipeline.vhd" "13e9bad055a27294d40196f3af496f2b5d6d8fdb" "20240409172854.587":
-  entity test_pipeline at 1( 0) + 0 on 2248;
-  architecture arch_test_pipeline of test_pipeline at 9( 130) + 0 on 2249;
+file . "test_etage_ex.vhd" "7587a882e25825541223995fd32f4151456d1216" "20240321142525.068":
+  entity test_etage_ex at 1( 0) + 0 on 869;
+  architecture archi_test_etage_ex of test_etage_ex at 9( 122) + 0 on 870;
+file . "combi.vhd" "e3f7868a24dd1872a2c760459c2375cb8ca1af9f" "20240411134554.395":
+  entity fulladd1b at 6( 105) + 0 on 2742;
+  architecture arche_full_add of fulladd1b at 17( 292) + 0 on 2743;
+  entity addcomplex at 24( 450) + 0 on 2744;
+  architecture arch_add_complex of addcomplex at 36( 714) + 0 on 2745;
+  entity alu at 54( 1107) + 0 on 2746;
+  architecture arch_alu of alu at 70( 1458) + 0 on 2747;
+  entity extension at 108( 2427) + 0 on 2748;
+  architecture arch_ext of extension at 120( 2696) + 0 on 2749;
+file . "mem.vhd" "476848092ef44dd61e091a0889f313ae3eac90a2" "20240411134554.398":
+  entity imem at 5( 90) + 0 on 2750;
+  architecture behave of imem at 12( 324) + 0 on 2751;
+  entity inst_mem at 64( 1936) + 0 on 2752;
+  architecture arch_inst_mem of inst_mem at 76( 2158) + 0 on 2753;
+  entity dmem at 87( 2382) + 0 on 2754;
+  architecture behave of dmem at 96( 2653) + 0 on 2755;
+  entity data_mem at 119( 3255) + 0 on 2756;
+  architecture arch_data_mem of data_mem at 133( 3511) + 0 on 2757;
+file . "reg_bank.vhd" "2700763eba8d9b3ac450aa46cbd418c4a399337e" "20240411134554.402":
+  package bus_mux_pkg at 1( 0) + 0 on 2758;
+  entity reg32 at 13( 301) + 0 on 2759;
+  architecture arch_reg of reg32 at 25( 553) + 0 on 2760;
+  entity reg32sync at 47( 1046) + 0 on 2761;
+  architecture arch_reg_sync of reg32sync at 59( 1302) + 0 on 2762;
+  entity reg4 at 82( 1803) + 0 on 2763;
+  architecture arch_reg of reg4 at 94( 2052) + 0 on 2764;
+  entity reg2 at 116( 2540) + 0 on 2765;
+  architecture arch_reg of reg2 at 128( 2789) + 0 on 2766;
+  entity reg1 at 150( 3276) + 0 on 2767;
+  architecture arch_reg of reg1 at 162( 3487) + 0 on 2768;
+  entity registerbank at 185( 3906) + 0 on 2769;
+  architecture arch_reg_bank of registerbank at 207( 4506) + 0 on 2770;
+file . "etages.vhd" "ac8083c924a505642ccf151cbee77a9f4656eb68" "20240411134554.405":
+  entity etagefe at 5( 68) + 0 on 2771;
+  architecture etagefe_arch of etagefe at 19( 359) + 0 on 2772;
+  entity etagede at 48( 1055) + 0 on 2773;
+  architecture arch_etagede of etagede at 64( 1540) + 0 on 2774;
+  entity etageex at 91( 2223) + 1 on 2775;
+  architecture arch_etageex of etageex at 106( 2709) + 1 on 2776;
+  entity etageme at 139( 3623) + 0 on 2777;
+  architecture arch_etageme of etageme at 156( 4114) + 0 on 2778;
+  entity etageer at 172( 4432) + 0 on 2779;
+  architecture arch_etageer of etageer at 186( 4799) + 0 on 2780;
+file . "test_etage_fe.vhd" "5020cf1184f19fc3d2240608b57d1e6977374052" "20240314143552.012":
+  entity test_etage_fe at 1( 0) + 0 on 240;
+  architecture archi_test_etage_fe of test_etage_fe at 9( 122) + 0 on 241;
+file . "test_etage_de.vhd" "3f0cd0220c48a6fc885440e26ac023169ce95803" "20240409165746.481":
+  entity test_etage_de at 1( 0) + 0 on 2052;
+  architecture arch_test_etage_de of test_etage_de at 9( 130) + 0 on 2053;
+file . "test_etage_mem.vhd" "c88dc92c4ee47310c70f76cd79e9b9ddd9425dee" "20240321143046.537":
+  entity test_etage_mem at 1( 0) + 0 on 908;
+  architecture arch_test_etage_mem of test_etage_mem at 8( 123) + 0 on 909;
+file . "decodeur.vhd" "1562ced88a8d3a7168a8a39cae968c533c825666" "20240411134554.408":
+  entity decodeur at 1( 0) + 0 on 2785;
+  architecture archdecodeur of decodeur at 14( 377) + 0 on 2786;
+file . "test_decodeur.vhd" "396d9966994a430e206dcfc1f9c1988fe3cca6b8" "20240327180626.035":
+  entity test_decodeur at 1( 0) + 0 on 1015;
+  architecture archi_test_decodeur of test_decodeur at 9( 122) + 0 on 1016;
+file . "condition.vhd" "ba7336091de678db2e9a71bf1b326af9faeed9b2" "20240411134554.407":
+  entity condition at 1( 0) + 0 on 2783;
+  architecture condition of condition at 14( 310) + 0 on 2784;
+file . "test_condition.vhd" "04a77c569c2d8714cd72a8b525636b4e2cb01bfe" "20240328131019.549":
+  entity test_condition at 1( 0) + 0 on 1114;
+  architecture archi_test_condition of test_condition at 9( 124) + 0 on 1115;
+file . "pipeline.vhd" "2f70ff9bdbfe9a01e34bdaf0e7c1691e9ad66dc1" "20240411134554.410":
+  entity pipeline at 1( 0) + 0 on 2789;
+  architecture pipeline of pipeline at 14( 376) + 0 on 2790;
+file . "UGA.vhd" "009355d9f005c8f2aee109ee1994d86c356db006" "20240411134554.409":
+  entity uga at 1( 0) + 0 on 2787;
+  architecture uga of uga at 15( 455) + 0 on 2788;
