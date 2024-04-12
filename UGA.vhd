@@ -23,16 +23,16 @@ begin
               "01" when a2 /= op3_ME_out and a2 = op3_RE_out and RegWr_RE = '1' else
               "00";
 
-    Gel_LI <= '1';
-    Gel_DI <= '1';
-    Clr_EX <= '1';
-    RAZ_DI <= '1';
+    --Gel_LI <= '1';
+    --Gel_DI <= '1';
+    --Clr_EX <= '1';
+    --RAZ_DI <= '1';
 
-    --LDRStall <= '1' when (reg1 = op3_EX_out or reg2 = op3_EX_out) and MemToReg_EX = '1' else '0';
+    LDRStall <= '1' when (reg1 = op3_EX_out or reg2 = op3_EX_out) and MemToReg_EX = '1' else '0';
 
-    --Gel_LI <= not (LDRStall or PCSrc or PCSrc_EX or PCSrc_mem);
-    --Gel_DI <= not LDRStall;
-   -- Clr_EX <= not (LDRStall or Bpris_EX);
-    --RAZ_DI <= not ( PCSrc or PCSrc_EX or PCSrc_mem or PCSrc_ER or Bpris_EX);
+    Gel_LI <= not (LDRStall or PCSrc or PCSrc_EX or PCSrc_mem);
+    Gel_DI <= not LDRStall;
+    Clr_EX <= not (LDRStall or Bpris_EX);
+    RAZ_DI <= not ( PCSrc or PCSrc_EX or PCSrc_mem or PCSrc_ER or Bpris_EX);
 
 end UGA;

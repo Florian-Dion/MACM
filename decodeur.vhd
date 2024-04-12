@@ -24,7 +24,7 @@ begin
 
     Branch <= '1' when instr(27 downto 26) = "10" else '0';
 
-    MemToReg <= '1' when instr(27 downto 26) = "01" else '0';
+    MemToReg <= '1' when instr(27 downto 26) = "01" and instr(20) = '1' else '0';
 
     MemWr <= '1' when instr(27 downto 26) = "01" else '0';
 
@@ -32,16 +32,15 @@ begin
 
     ImmSrc <= instr(27 downto 26);
 
-    RegWr <= '1' when instr(27 downto 26) = "00" and instr(25) = '0' and instr(20) = '0' else
-                '0' when instr(27 downto 26) = "00" and instr(25) = '0' and instr(20) = '1' and instr(24 downto 21) = "1010" else
+    RegWr <=    '0' when instr(27 downto 26) = "00" and instr(25) = '0' and instr(20) = '1' else -- and instr(24 downto 21) = "1010" else
+                '1' when instr(27 downto 26) = "00" and instr(25) = '0' else
                 '1' when instr(27 downto 26) = "00" and instr(25) = '1' else
                 '1' when instr(27 downto 26) = "01" and instr(20) ='1' else
                 '0' when instr(27 downto 26) = "01" and instr(20) ='0' else
                 '0' when instr(27 downto 26) = "10";
 
-    RegSrc <= "00" when instr(27 downto 26) = "00" else
-                "10" when instr(27 downto 26) = "01" else
-                "01" when instr(27 downto 26) = "10";
+    RegSrc <= "10" when instr(27 downto 26) = "01" and instr(20) = '0' else
+                "01" when instr(27 downto 26) = "10" else "00";
 
     PCSrc <= '0' when instr(27 downto 26) = "01" and instr(20) = '0' else
                 '1' when instr(15 downto 12) = "1111" else '0';
